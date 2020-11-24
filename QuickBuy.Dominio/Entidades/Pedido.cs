@@ -46,6 +46,9 @@ namespace QuickBuy.Dominio.Entidades
 
                 AdicionarCritica("Critica - CEP deve estar preenchido");
 
+            if (FormaPagamentoId == 0)
+                AdicionarCritica("Critica - Não foi informado a forma de pagamento");
+
         }
     }
 }

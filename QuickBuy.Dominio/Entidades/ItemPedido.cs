@@ -11,7 +11,17 @@
 
         public override void Validate()
         {
-            throw new System.NotImplementedException();
+        
+            LimparMensagensValidacao();
+
+            if (ProdutoId==0)
+                AdicionarCritica("Não foi identificada a referência do produto");
+
+            if (Quantidade ==0)
+
+                AdicionarCritica("Quantidade não foi informada");
+
         }
     }
+    
 }
