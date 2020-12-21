@@ -7,7 +7,7 @@ namespace QuickBuy.Dominio.Entidades
     {
         public List<string> _mensagensValidacao { get; set; }
 
-        private List<string> mensagemValidacao
+        private List<string> MensagemValidacao
         {
             get { return _mensagensValidacao ?? (_mensagensValidacao = new List<string>()); }
 
@@ -16,18 +16,18 @@ namespace QuickBuy.Dominio.Entidades
 
         protected void  LimparMensagensValidacao()
         {
-            mensagemValidacao.Clear();
+            MensagemValidacao.Clear();
         }
 
         protected void AdicionarCritica(string mensagem)
         {
-            mensagemValidacao.Add(mensagem);
+            MensagemValidacao.Add(mensagem);
         }
 
         public abstract void Validate();
             protected bool EhValido
         {
-            get { return ! mensagemValidacao.Any(); }
+            get { return ! MensagemValidacao.Any(); }
         
         }
         
