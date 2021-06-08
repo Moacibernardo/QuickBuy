@@ -10,7 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ProdutoComponent } from './produto/produto.component';
-import { LoginComponent } from './usuario/login/login.component';
+import { LoginComponent } from './usuario/login/login.component'
 
 
 @NgModule({

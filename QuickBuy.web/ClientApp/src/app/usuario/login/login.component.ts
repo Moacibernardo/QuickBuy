@@ -10,13 +10,15 @@ import { Usuario } from "../../modelo/usuario";
 export class LoginComponent {
 
   public usuario = new Usuario();
-
+    usuarioAutenticado: boolean;
   constructor() {
     this.usuario = new Usuario();
   }
 
   entrar() {
-    alert(this.usuario.email + " - " + this.usuario.senha);
+    if (this.usuario.email == "leo@teste.com" && this.usuario.senha == "abc123") {
+    this.usuarioAutenticado = true;
+  }
 
   }
 
