@@ -8,16 +8,14 @@ import { Usuario } from "../../modelo/usuario";
 
 })
 export class LoginComponent {
-
-  public usuario = new Usuario();
-    usuarioAutenticado: boolean;
+  public usuario;
+  
   constructor() {
     this.usuario = new Usuario();
   }
 
   entrar() {
     if (this.usuario.email == "leo@teste.com" && this.usuario.senha == "abc123") {
-    this.usuarioAutenticado = true;
   }
 
   }

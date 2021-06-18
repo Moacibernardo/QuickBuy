@@ -7,20 +7,38 @@
     <input type="email" id="inputEmail"
            name="email" placeholder="Informe o seu Email"
            class="form-control mb-2"
-           [(ngModel)]="usuario.email" />
+           [(ngModel)]="usuario.email"
+           #email="ngModel"
+           email
+           required/>
+    <div class="alert alert-danger" *ngIf="email.invalid && (email.dirty || email.touched)">
+      <div *nfIf="email.errors.required">
+        Email deve ser preenchido
+
+      </div>
+      <div *nfIf="email.errors.email">
+        Email no formato invalido
+
+      </div>
+
+    </div>
 
     <label for="inputSenha" class="sr-only">Senha</label>
     <input type="password" id="inputSenha"
            name="senha" placeholder="Senha"
            class="form-control mb-2"
-           [(ngModel)]="usuario.senha" />
+           [(ngModel)]="usuario.senha"
+           #senha="ngModel"
+           required/>
+    <div class="alert alert-danger" *ngIf="senha.invalid && (senha.dirty || senha.touched)">
+      <div *ngIf="senha.errors.required">
+        Senha deve ser informada
+      </div>
+    </div>
     <button class="btn btn-primary btn-block" type="submit" (click)="entrar()">Entrar</button>
       <img src="C:\Temp\QuickBuy\QuickBuy.web\ClientApp\src\assets\img\quick-logo.jpg"/>
 
-    <div class="alert alert-primary" role="Alert" *ngIf="UsuarioAutenticado">
-      Usuario Autenticado !
-    </div>
+    
   </form>
-
 </div>
 
